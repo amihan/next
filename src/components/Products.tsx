@@ -28,7 +28,7 @@ const Products = () => {
         <div className={s.products}>
             <p className={s.products__title}>Товары</p>
             <div className={s.products__block}>
-                {data.products.map(value => <ProductСard {...value} />)}
+                {data.products.map(value => <ProductСard {...value} quantity={1} />)}
             </div>
         </div>
     )

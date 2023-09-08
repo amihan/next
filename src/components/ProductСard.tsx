@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import s from '../style/ProductСard.module.scss'
-import { IProduct } from '@/types/cart.interface';
+import { IProduct, IProductBasket } from '@/types/cart.interface';
 import Image from 'next/image';
 
 // import image from "@/assets/Image.png"
@@ -13,7 +13,7 @@ import { addBasket } from '@/store/basketSlice';
 
 
 
-const ProductСard: FC<IProduct> = (props) => {
+const ProductСard: FC<IProductBasket> = (props) => {
     const { title, price, images } = props;
 
     const dispatch = useAppDispatch();
@@ -28,7 +28,7 @@ const ProductСard: FC<IProduct> = (props) => {
                 <span className={s.cart__price}>{price}$</span>
             </div>
 
-            <button className={s.cart__addBasket} onClick={() => dispatch(addBasket(props))}>
+            <button className={s.cart__addBasket} onClick={() => dispatch(addBasket({ ...props }))}>
                 <Image className={s.cart__addBaskeImage} src={basket} alt="image" />
                 <span>В корзину</span>
             </button>

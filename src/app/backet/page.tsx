@@ -5,14 +5,15 @@ import { useState } from "react";
 import s from '@/style/Basket.module.scss'
 import ProductBacket from "@/components/ProductBacket";
 import Link from "next/link";
-import { useAppSelector } from "@/store/hook";
+import { useAppDispatch, useAppSelector } from "@/store/hook";
+import { selectTotalPrice } from "@/store/basketSlice";
 
 
 const Basket = () => {
     const [isEmpty, setEmpty] = useState(false)
 
     const basket = useAppSelector(state => state.basket.list)
-
+    const total = useAppSelector(selectTotalPrice);
     return (
         <div>
             {!basket.length ? <EmptyBasket /> : <div className={s.backet}>
@@ -27,7 +28,7 @@ const Basket = () => {
                     <div className={s.backet__result}>
                         <p className={s.backet__sum}>
                             <span>Итого</span>
-                            <span>5000$</span>
+                            <span>{total}$</span>
                         </p>
                         <Link className={s.backet__order} href='/decoration'>Перейти к оформлению</Link>
 

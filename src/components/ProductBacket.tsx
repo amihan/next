@@ -4,29 +4,24 @@ import Image from 'next/image';
 import image from "@/assets/Image.png"
 import del from "@/assets/delete.svg"
 import { FC, useState } from 'react';
-import { IProduct } from '@/types/cart.interface';
+import { IProductBasket } from '@/types/cart.interface';
 import { useAppDispatch } from '@/store/hook';
-import { removeBasket } from '@/store/basketSlice';
+import { addQuantity, removeBasket, removeQuantity } from '@/store/basketSlice';
 
 
-const ProductBacket: FC<IProduct> = ({ title, price, images, id, stock }) => {
-
-    const [quantity, setQuantity] = useState(1)
-
+const ProductBacket: FC<IProductBasket> = ({ title, price, images, id, stock, quantity }) => {
     const dispatch = useAppDispatch()
 
     const handleAddQuantityProduct = () => {
         if (quantity < stock) {
-            setQuantity(quantity + 1)
+            dispatch(addQuantity(id))
         }
     }
-
     const handleRemoveQuantityProduct = () => {
         if (quantity > 1) {
-            setQuantity(quantity - 1)
+            dispatch(removeQuantity(id))
         }
     }
-
 
     return (
         <div className={s.cart}>
