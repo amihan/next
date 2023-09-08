@@ -1,0 +1,32 @@
+.backet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 61px 0 127px;
+
+    &__image {
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        color: #101010;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    &__subtitle {
+        color: #838383;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    &__goHome {
+        padding: 20px 0;
+        width: 540px;
+        color: #FFF;
+        font-size: 20px;
+        border-radius: 20px;
+        background: #101010;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+    }
+}

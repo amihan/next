@@ -1,0 +1,41 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+
+    border-radius: 30px 30px 0px 0px;
+    padding: 30px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+
+    &__logo {
+        color: #101010;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    &__conditions {
+        font-weight: 400;
+        margin-bottom: 35px;
+    }
+}
+
+.list {
+    font-weight: 400;
+
+
+    &__item {
+        margin-bottom: 11px;
+    }
+}
+
+.language {
+    display: flex;
+
+    &__img {
+        margin-right: 10px;
+    }
+
+    &__ru {
+        margin-right: 10px;
+    }
+}

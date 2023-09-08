@@ -1,0 +1,16 @@
+.products {
+    padding-bottom: 60px;
+
+    &__title {
+        color: #838383;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__block {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        justify-items: center;
+    }
+}

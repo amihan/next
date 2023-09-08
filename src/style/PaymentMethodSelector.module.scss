@@ -1,0 +1,22 @@
+.payment {
+
+    margin-bottom: 20px;
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    &__method {
+        padding: 12px 17px;
+        background-color: #000;
+        margin-right: 10px;
+        border-radius: 20px;
+        color: #fff;
+    }
+
+
+    &__method.selected {
+        background-color: #a46118;
+    }
+
+}

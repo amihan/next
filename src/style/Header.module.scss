@@ -1,0 +1,29 @@
+.header {
+    font-size: 20px;
+    padding: 13px 0 30px;
+    display: flex;
+    justify-content: space-between;
+
+    &__logoName {
+        color: #101010;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+    }
+
+    &__basket {
+        width: 22px;
+        height: 20px;
+    }
+
+    &__like {
+        width: 22px;
+        height: 20px;
+        margin-right: 25px;
+    }
+
+}

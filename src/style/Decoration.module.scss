@@ -1,0 +1,82 @@
+.decoration {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    min-width: 445px;
+    padding: 15px 10px 20px 20px;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+
+    &__title {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    &__result {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 17px;
+    }
+
+    &__buy {
+        padding: 13px 20px;
+        border-radius: 10px;
+        background: #101010;
+        box-shadow: 0px 0px 20px 0px rgba(67, 216, 84, 0.25);
+        text-align: center;
+        color: #FFF !important;
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+
+.information {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.currencyExchange {
+    align-self: flex-start;
+    min-width: 400px;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+    padding: 15px;
+
+    &__info {
+        margin-bottom: 15px;
+    }
+
+    &__title {
+        font-size: 20px;
+        margin-bottom: 17px;
+    }
+
+    &__field {
+        font-size: 20px;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    &__blockBtn {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__btn {
+        color: #FFF;
+        border-radius: 20px;
+        background: #101010;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+        padding: 12px 17px;
+    }
+}
