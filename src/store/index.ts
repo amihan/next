@@ -2,11 +2,13 @@
 
 import { configureStore } from "@reduxjs/toolkit";
 import currencyRuducer from './currencySlice'
+import basketRuducer from './basketSlice'
 
 
 const store = configureStore({
     reducer: {
         currency: currencyRuducer,
+        basket: basketRuducer
     }
 })
 

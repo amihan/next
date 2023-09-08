@@ -61,6 +61,7 @@
         width: 146px;
         height: 136px;
         margin-right: 23px;
+        border-radius: 20px;
     }
 
     &__title {
@@ -70,6 +71,12 @@
     }
 
     &__price {
+        color: #AAA;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    &__stock {
         color: #AAA;
         font-size: 15px;
     }

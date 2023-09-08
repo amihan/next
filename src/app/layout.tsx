@@ -31,7 +31,6 @@ export default function RootLayout({
       <body>
         <Provider store={store}>
           <QueryClientProvider client={queryClient}>
-
             <div className='wrapper'>
               <div className="container">
                 <Header />

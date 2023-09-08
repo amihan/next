@@ -14,6 +14,12 @@ export interface IProduct {
     images: string[]
 }
 
+
+export interface IProductBasket extends IProduct {
+    quantity: number
+}
+
+
 export interface IProducts {
     products: IProduct[]
     total: number

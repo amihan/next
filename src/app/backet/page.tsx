@@ -5,24 +5,23 @@ import { useState } from "react";
 import s from '@/style/Basket.module.scss'
 import ProductBacket from "@/components/ProductBacket";
 import Link from "next/link";
+import { useAppSelector } from "@/store/hook";
 
 
 const Basket = () => {
     const [isEmpty, setEmpty] = useState(false)
 
+    const basket = useAppSelector(state => state.basket.list)
+
     return (
         <div>
-            {isEmpty ? <EmptyBasket /> : <div className={s.backet}>
+            {!basket.length ? <EmptyBasket /> : <div className={s.backet}>
 
                 <p className={s.backet__title}>Корзина</p>
 
                 <div className={s.backet__block}>
                     <div className={s.backet__product}>
-                        <ProductBacket />
-                        <ProductBacket />
-                        <ProductBacket />
-                        <ProductBacket />
-                        <ProductBacket />
+                        {basket.map(value => <ProductBacket {...value} />)}
                     </div>
 
                     <div className={s.backet__result}>
