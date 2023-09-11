@@ -14,3 +14,21 @@
         justify-items: center;
     }
 }
+
+@media (max-width: 1150px) {
+
+    .products {
+        &__block {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width: 740px) {
+
+    .products {
+        &__block {
+            grid-template-columns: 1fr;
+        }
+    }
+}

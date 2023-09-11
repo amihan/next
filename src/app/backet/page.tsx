@@ -10,7 +10,6 @@ import { selectTotalPrice } from "@/store/basketSlice";
 
 
 const Basket = () => {
-    const [isEmpty, setEmpty] = useState(false)
 
     const basket = useAppSelector(state => state.basket.list)
     const total = useAppSelector(selectTotalPrice);
@@ -22,7 +21,7 @@ const Basket = () => {
 
                 <div className={s.backet__block}>
                     <div className={s.backet__product}>
-                        {basket.map(value => <ProductBacket {...value} />)}
+                        {basket.map(value => <ProductBacket {...value} key={value.id} />)}
                     </div>
 
                     <div className={s.backet__result}>

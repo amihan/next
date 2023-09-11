@@ -51,3 +51,15 @@
     }
 
 }
+
+@media (max-width: 450px) {
+    .cart {
+        padding: 10px 20px 25px;
+        width: 280px;
+
+        &__image {
+            width: 260px;
+            height: 260px;
+        }
+    }
+}

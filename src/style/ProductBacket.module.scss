@@ -85,3 +85,10 @@
         cursor: pointer;
     }
 }
+
+@media (max-width: 650px) {
+    .cart {
+        padding: 14px 15px 13px 10px;
+        min-width: 300px;
+    }
+}

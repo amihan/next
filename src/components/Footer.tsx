@@ -13,7 +13,6 @@ const Footer = () => {
                 <Link href='/contacnt'><li className={s.list__item}>Контакты</li></Link>
             </ul>
             <div className={s.footer__block}>
-                <Link href='/conditions'> <p className={s.footer__conditions}>Уловия пользования</p></Link>
                 <div className={s.language}>
                     <Image className={s.language__img} src={language} alt="language-image" />
                     <div className={s.language__option}>

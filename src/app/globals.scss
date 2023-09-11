@@ -99,17 +99,14 @@ body {
     font-style: normal;
     line-height: normal;
     font-family: 'Montserrat', sans-serif;
+    background-color: #EAEAEA;
 }
 
-.wrapper {
-    background-color: #EAEAEA;
-    min-height: 100%;
-}
 
 .container {
     max-width: 1110px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 15px;
 
     display: flex;
     flex-direction: column;
@@ -117,5 +114,5 @@ body {
 }
 
 .main {
-    flex: 0 1 auto;
+    flex: 1 1 auto;
 }

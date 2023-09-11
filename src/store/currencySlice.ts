@@ -1,6 +1,9 @@
 'use client'
 
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { clearBasket } from "./basketSlice";
+import { IProductBasket } from "@/types/cart.interface";
+
 
 export enum PaymentMethod {
     Dollars = 'dollars',
@@ -14,10 +17,11 @@ interface CurrencyState {
 }
 
 const initialState: CurrencyState = {
-    dollars: 100,
-    coins: 2000,
+    dollars: 100000,
+    coins: 2000000,
     selectedMethod: PaymentMethod.Dollars,
 };
+
 
 const currencySlice = createSlice({
     name: 'currency',
@@ -41,8 +45,20 @@ const currencySlice = createSlice({
         selectPaymentMethod: (state, action: PayloadAction<PaymentMethod>) => {
             state.selectedMethod = action.payload;
         },
+
+        spendMoney: (state, action: PayloadAction<number>) => {
+            const amount = action.payload;
+
+            if (amount > 0) {
+                if (state.selectedMethod === PaymentMethod.Dollars) {
+                    state.dollars -= amount;
+                } else if (state.selectedMethod === PaymentMethod.Coins) {
+                    state.coins -= amount;
+                }
+            }
+        },
     },
 });
 
-export const { exchangeDollarsToCoins, exchangeCoinsToDollars, selectPaymentMethod } = currencySlice.actions;
+export const { exchangeDollarsToCoins, exchangeCoinsToDollars, selectPaymentMethod, spendMoney } = currencySlice.actions;
 export default currencySlice.reducer;

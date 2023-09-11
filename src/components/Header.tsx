@@ -16,7 +16,7 @@ const Header = () => {
             <Link href='/'> <h1 className={s.header__logoName}>QPICK</h1></Link>
 
             <div className={s.header__block}>
-                <Image className={s.header__like} src={like} alt="like" />
+                {/* <Image className={s.header__like} src={like} alt="like" /> */}
                 <div className={s.header__blockBasket}>
                     <Link href='/backet'>
                         <Image className={s.header__basket} src={basket} alt="basket" />

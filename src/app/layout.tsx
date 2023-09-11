@@ -31,14 +31,12 @@ export default function RootLayout({
       <body>
         <Provider store={store}>
           <QueryClientProvider client={queryClient}>
-            <div className='wrapper'>
-              <div className="container">
-                <Header />
-                <main className='main'>
-                  {children}
-                </main>
-                < Footer />
-              </div>
+            <div className="container">
+              <Header />
+              <main className='main'>
+                {children}
+              </main>
+              < Footer />
             </div>
           </QueryClientProvider>
         </Provider>

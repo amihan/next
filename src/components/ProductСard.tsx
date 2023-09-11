@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import s from '../style/ProductСard.module.scss'
-import { IProduct, IProductBasket } from '@/types/cart.interface';
+import { IProduct } from '@/types/cart.interface';
 import Image from 'next/image';
 
 // import image from "@/assets/Image.png"
@@ -13,7 +13,7 @@ import { addBasket } from '@/store/basketSlice';
 
 
 
-const ProductСard: FC<IProductBasket> = (props) => {
+const ProductСard: FC<IProduct> = (props) => {
     const { title, price, images } = props;
 
     const dispatch = useAppDispatch();
